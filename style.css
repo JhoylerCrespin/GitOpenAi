@@ -1,0 +1,105 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > * {
+    width: 100%;
+    max-width: 1024px;
+  }
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 1.4rem 0rem 1.4rem;
+  > * {
+    margin: 0.5rem 0rem 0.5rem 0rem;
+  }
+}
+:root {
+  --color_title: rgb(54, 228, 161);
+  --color-subtitle: rgb(70, 206, 154);
+
+  --bordes: rgb(144, 245, 206);
+  --solid_buton: rgb(53, 201, 146);
+  --color_sobre_solid: rgb(221, 248, 238);
+  --border_element: 1px solid var(--bordes);
+}
+
+h1 {
+  text-align: center;
+  color: var(--color_title);
+}
+
+h2 {
+  color: var(--color-subtitle);
+  font-size: larger;
+}
+
+h3 {
+  font-size: medium;
+  font-weight: 400;
+}
+
+input,
+button {
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+input[type="text"] {
+  border: var(--border_element);
+}
+
+button {
+  background-color: var(--solid_buton);
+  color: var(--color_sobre_solid);
+  font-size: larger;
+  border: none;
+  font-weight: 500;
+}
+
+.respusta {
+  border: var(--border_element);
+  border-radius: 5px;
+  min-height: 70px;
+}
+
+ul {
+  padding: 0rem 0rem 0rem 3rem;
+}
+hr{
+  border: var(--border_element);
+}
+#fileForm{
+
+  display: flex;
+  flex-direction: column;
+
+  > * {
+    margin: 0.5rem 0rem 0.5rem 0rem;
+  }
+
+
+
+}
+
+.respustaFile{
+  border: var(--border_element);
+  border-radius: 5px;
+  min-height: 70px;
+}
+
+.base64{
+
+  width: 100%;
+  overflow: hidden;;
+}

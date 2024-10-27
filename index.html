@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+
+  <title>Document</title>
+
+</head>
+
+<body>
+
+  <h1>Pruebas OpenAI</h1>
+  <h2>Obtener Solo Respuestas</h2>
+
+  <label for="question">Escribe tu pregunta:</label>
+  <input type="text" id="question" placeholder="¿Cuál es tu pregunta?" aria-multiline="true" />
+
+
+
+
+  <button onclick="handleSubmit()">Enviar</button>
+
+  <h3>Respuesta:</h3>
+  <div class="respusta" id="output" style="padding: 10px;"></div>
+  <hr>
+  <h2>Obtenr Jsons completo de la Api</h2>
+
+
+  <label for="questionJson">Escribe tu pregunta:</label>
+  <input type="text" id="questionJson" placeholder="¿Cuál es tu pregunta?" multiple />
+
+  <button onclick="handleSubmitJson()">Enviar</button>
+
+
+  <h3>Respuesta del Asistente:</h3>
+  <div class="respusta" id="outputJson" style="padding: 10px;"></div>
+
+
+  <h3>Detalles de la Respuesta:</h3>
+  <ul>
+    <li>Tokens de la Solicitud: <span id="promptTokens"></span></li>
+    <li>Modelo:<span id="model"></span></li>
+    <li>Tokens de la Respuesta: <span id="completionTokens"></span></li>
+    <li>Tokens Totales <span id="totalTokens"></span></li>
+  </ul>
+
+  <hr>
+
+  <h2>Análisis de Archivo</h2>
+
+  <label for="promptAnalizarFile">Prompt:</label>
+  <input type="text" id="promptAnalizarFile" placeholder="¿Qué desea hacer con el archivo?" required>
+
+  <input type="file" id="fileInput" accept="image/*,.pdf">
+  <button onclick="handleSubmitAnalizeFile()">Analizar</button>
+
+  <ul>
+    <li>Tipo del archivo: <span id="fileType"></span></li>
+    <li>Páginas PDF: <span id="fileSize"></span></li>
+    <li class="base64">Conversión a Base64: <span id="result"></span></li>
+
+    <li>Numero Tokens: <span id="totalTokensFile"></span></li>
+  </ul>
+  <div class="respuestaFile respusta" id="outputAnalisisFile"></div>
+
+
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
